@@ -1,0 +1,293 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.Body_Login{
+   background-image: linear-gradient(
+    180deg,          /* direction: 180deg = top → bottom (same as 'to bottom') */
+    #ffffff 0%,      /* start color at 0% (top): pure white */
+    #fff4e6 35%,     /* mid stop at 35%: very light orange */
+    #ff6a00 100%     /* end color at 100% (bottom): orange */
+  );
+}
+
+
+body{
+    min-height: 100vh;
+    background: url();
+    background-size: cover;
+    background-position: center;
+    color: #173461;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 9%;
+    transition: all .50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 30px;
+    width: 40px;
+}
+
+.logo span{
+    color: #173461;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Times New Roman';
+}
+
+.Nav_Links{
+    display: flex;
+}
+
+.Nav_Links a{
+    color: #173461;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+
+.Nav_Links a:hover{
+    color: #ff8c3a;
+}
+
+.Main_Highlight a{
+    color: #ff8C3a;
+}
+
+.Main{
+    display: flex;
+    align-items: center;
+}
+
+.Main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: #173461;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .50s ease;
+}
+
+.Main a:hover{
+    color: #ff8c3a;
+}
+
+.User{
+    display: flex;
+    align-items: center;
+}
+
+.User i{
+    color: #ff8c3a;
+    font-size: 26px;
+    margin-right: 7px;
+}
+
+/*Hero section*/
+
+section{
+    padding: 0 12%;
+}
+
+.Hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Hero_Text h1{
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin: 30px 0;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: SlideRight 1s ease forwards;
+}
+
+@keyframes SlideRight{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.Hero_Text p{
+    width: 100%;
+    max-width: 620px;
+    font-size: 1rem;
+    line-height: 28px;
+    color: #173461;
+    margin-bottom: 40px;
+    text-align: justify;
+
+    transform: translateX(100px);
+    opacity: 0;
+    animation: SlideLeft 1s ease forwards;
+}
+
+@keyframes SlideLeft{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.Main_Hero{
+    display: flex;
+    align-items: center;
+
+    transform: translateX(100px);
+    opacity: 0;
+    animation: SlideRight 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: #b32525;
+    background: linear-gradient(to right, #ee3f0d, #ff8C3a, #ffb822);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .5s ease;
+    margin-right: 20px;
+}
+
+.btn:hover{
+    transform: scale(1,1);
+  
+}
+
+.Hero_Img:hover{
+    cursor: pointer;
+}
+
+.Hero_Img img{
+    width: 70%;
+    
+    filter: drop-shadow(0 0 8rem #fcf5ad);
+    animation:Zoom 0.5s ease forwards;
+    transform: scale(0);
+    animation-delay: 1s;
+}
+
+/*
+.Hero_Img img{
+    display:block;
+  width:100%;
+  height:auto;
+  opacity:1 !important;
+  filter:none !important;
+  mix-blend-mode:normal !important;
+  visibility:visible !important;
+  position:relative; z-index:2; 
+  background:#f8d; 
+}
+*/
+
+.Login{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* shift own center onto 50%/50% */
+    /* optional */
+    border: 1px solid orangered;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*
+top: 50%;
+    transform: translateY(-50%);
+ optional layout for only align vertically
+ .v-wrap{
+    min-height: 100dvh;
+    display: grid;
+    align-items: center;      vertical centering 
+    justify-items: start;     keep normal left alignment 
+*/
+
+/*
+.center-h{
+    position: fixed;        viewport-based
+    left: 50%;
+    transform: translateX(-50%);
+    top: 24px;              wherever you want vertically
+*/
+
+.Input_Login{
+    width: 20ch;
+    margin: 5px 0px;
+    height: 35px;
+    padding: 7px;
+    text-align: center;
+    
+    
+}
+
+.Button_Login{
+    height: 35px;
+    margin: 5px 0px;
+    background-color: skyblue;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    display: flexbox;
+}
+
+.Text_Login{
+    margin: 110px;
+    text-align: center;
+    display: flexbox;
+}
+
+
+@keyframes Zoom{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
